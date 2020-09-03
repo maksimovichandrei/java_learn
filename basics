@@ -1,13 +1,27 @@
 public class Main
 {
 	public static void main(String[] args) {
-		
+	//Math	
 		double x,y,z;
 		x=90;
 		y=100;
 		System.out.println("x="+x);
 		System.out.println("y="+y);
 		z=Math.sin(x);
+		//Math.sqrt(a);
+		//Math.pow(a,b);
 		System.out.println("sin x= "+z);
+		// Strings
+		String S = new String("333.111");
+		System.out.println(S);
+		System.out.println(S.substring(0, 3));
+	String S1 = new String(S.substring(0, 3));
+	System.out.println(S1);
+		String S2 = new String(S.substring(4));
+	System.out.println(S2);
+		String S3 = new String(S.substring(3,4));
+	System.out.println(S3);
+	String Srevert= S2+S3+S1;
+	System.out.println(Srevert);
 	}
 }
