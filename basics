@@ -1,0 +1,13 @@
+public class Main
+{
+	public static void main(String[] args) {
+		
+		double x,y,z;
+		x=90;
+		y=100;
+		System.out.println("x="+x);
+		System.out.println("y="+y);
+		z=Math.sin(x);
+		System.out.println("sin x= "+z);
+	}
+}
