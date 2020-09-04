@@ -1,0 +1,57 @@
+public class Hours_string {
+    public static void main(String[] args) {
+    // calculate time in hh mm ss from seconds
+    int timestart = 116;
+    int timeM1 = timestart/60;
+    //multiply modulo to 10 - it is ss
+    int times = timestart%60;
+	System.out.println(times);
+	System.out.println(timeM1);
+    double timeh = timeM1/60;
+    int timem = timeM1%60;
+String secondoutput, minuteoutput, houroutput1 = "";
+//create string with seconds
+	if (times<10) {
+
+        secondoutput = "0" + times;
+        System.out.println(secondoutput);
+    }
+	else
+    {
+        secondoutput = "" + times;
+        System.out.println(secondoutput);
+    }
+    //create string with minutes
+
+	if (timem<10) {
+
+        minuteoutput = "0" + timem;
+        System.out.println(minuteoutput);
+    }
+	else
+    {
+        minuteoutput = "" + timem;
+        System.out.println(minuteoutput);
+    }
+    //create string with hh
+	if (timeh==0) {
+        houroutput1 = "0" + "0";
+        System.out.println(houroutput1);
+
+    }
+      else {
+        if (timeh<10) {
+            houroutput1 = "0" + timeh;
+            System.out.println(houroutput1);
+        }
+        else
+        {
+            houroutput1 = "" + timeh;
+            System.out.println(houroutput1);
+        }
+    }
+        String g1 = houroutput1 + "." + minuteoutput +"." + secondoutput;
+        System.out.println("Entered time in sec: " + timestart + System.lineSeparator() + "time HH.MM.SS is " + g1);
+
+}
+}
