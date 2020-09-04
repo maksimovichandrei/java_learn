@@ -23,64 +23,6 @@ public class Main
 	System.out.println(S3);
 	String Srevert= S2+S3+S1;
 	System.out.println(Srevert);
-		// calculate time in hh mm ss from seconds
-	int timestart = 116;
-	int timeM1 = timestart/60; 
-	//multiply modulo to 10 - it is ss
-	int times = timestart%60;
-	System.out.println(times);
-	System.out.println(timeM1);
-	double timeh = timeM1/60; 
-	int timem = timeM1%60;
-//create string with seconds
-	if (times<10) {
-	    String secondoutput;
-      secondoutput = String.format("0" + times);
-      System.out.println(secondoutput);
-	}
-	else
-	 	{ 
-	 String secondoutput;
-	   secondoutput = String.format("" + times);
-	   System.out.println(secondoutput);
-	    	}
-	    	//create string with minutes
-	    	
-	if (timem<10) {
-	    String minuteoutput;
-      minuteoutput = String.format("0" + timem);
-      System.out.println(minuteoutput);
-	}
-	else
-	 	{ 
-	 String minuteoutput;
-	   minuteoutput = String.format("" + timem);
-	   System.out.println(minuteoutput);
-	    	}
-	//create string with hh
-	if (timeh==0) {
-	    String houroutput1;
-      houroutput1 = String.format("0" + "0");
-      System.out.println(houroutput1);
-	    
-	} 
-      else {
-	if (timeh<10) {
-	    String houroutput1;
-      houroutput1 = String.format("0" + timeh);
-      System.out.println(houroutput1);
-	}
-	else
-	 	{ 
-	 String houroutput1;
-	   houroutput1 = String.format("" + timeh);
-	   System.out.println(houroutput1);
-	    	}
-	}
-	
-	//System.out.println(houroutput1);
-	//	System.out.println(timestart + " seconds is "  + "." + minuteoutput + "." + secondoutput);
-	}
-
+		
 	}
 }
