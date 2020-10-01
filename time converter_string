@@ -1,7 +1,13 @@
+import java.util.Scanner;
+
+import static java.lang.String.format;
+
 public class Hours_string {
     public static void main(String[] args) {
     // calculate time in hh mm ss from seconds
-    int timestart = 116;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter amount of seconds:");
+    int timestart = sc.nextInt();
     int timeM1 = timestart/60;
     //multiply modulo to 10 - it is ss
     int times = timestart%60;
@@ -50,7 +56,7 @@ String secondoutput, minuteoutput, houroutput1 = "";
             System.out.println(houroutput1);
         }
     }
-        String g1 = houroutput1 + "." + minuteoutput +"." + secondoutput;
+        String g1 = String.join(".", houroutput1, minuteoutput, secondoutput);
         System.out.println("Entered time in sec: " + timestart + System.lineSeparator() + "time HH.MM.SS is " + g1);
 
 }
