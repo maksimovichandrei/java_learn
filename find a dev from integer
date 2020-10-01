@@ -1,0 +1,35 @@
+import java.util.Scanner;
+import static java.lang.String.format;
+
+public class Scaner_test {
+    public static void main(String[] args) {
+// для каждого натурального числа из промежутка от n до m вывести все делители, кроме 1 и самого числа
+        //1. check if m>n or n>m
+        //2. create cycle from 2 to x(x=m--n)
+        //3. cycle if division result>1 and int then printIn
+            Scanner scm = new Scanner(System.in);
+        System.out.println("Введите число m:");
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Введите число n:");
+            int m = scm.nextInt();
+            int n = scn.nextInt();
+            if (m>n) {
+                for (int i = n; i <= m; i++) {
+                    System.out.println("Searching divisions for number: "+ i);
+                    for (int k = 2; k <i; k++) {
+                        if ( i%k == 0)
+                        {System.out.println( "Dev for number " + i + " is " + k);}
+                    }
+                }
+            }
+            else {
+                for (int i = m; i <= n; i++) {
+                    System.out.println("Searching divisions for number: "+ i);
+                    for (int k = 2; k <i; k++) {
+                        if ( i%k == 0)
+                        {System.out.println("Dev for number " + i + " is " + k);}
+                    }
+                }
+            }
+        }
+    }
