@@ -39,3 +39,29 @@ public class Empty {
     }
 };
 //END OF Task: find all natural numbers which can be multiplied to K.
+
+
+// Task: find sum of array elements which are exceeded Z
+public class Find_and_change {
+    public static void main(String[] args){
+        //create new array
+        System.out.println("enter array length");
+        Scanner console = new Scanner(System.in);
+        int k = console.nextInt();
+        System.out.println("enter Z - minimal value");
+        Scanner console1 = new Scanner(System.in);
+        int z = console1.nextInt();
+        int zAmount = 0;
+        for (int i = 0; i<k; i++) {
+            int[] data = new int[k];
+            data[i]= i+1;
+            if (data[i] > z) {
+               zAmount = zAmount + data [i];
+            }
+            }
+        System.out.println("Sum of number exceeded "+ z + " is "+zAmount);
+        };
+
+
+    }
+    // END! of Task: find sum of array elements which are exceeded Z
