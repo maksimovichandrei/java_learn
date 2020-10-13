@@ -1,0 +1,41 @@
+//Task: find all natural numbers which can be multiplied to K.
+package Main;
+
+import java.util.Scanner;
+
+public class Empty {
+    public static void main(String[] args) {
+        System.out.println("Enter array size");
+        Scanner console = new Scanner(System.in);
+        int i = console.nextInt();
+              addNaturalToArray(i);
+
+    }
+    public static void addNaturalToArray (int i) {
+                int data[] = new int[i];
+                for (int j = 0; j< i; j++){
+                    int k= j+1;
+                  data[j] = k ;
+                    System.out.println("array element "+ j + " is " +k);
+            }
+
+        System.out.println("Enter K number");
+        Scanner console1 = new Scanner(System.in);
+        int k = console1.nextInt();
+        findKratnoK(k, data);
+    }
+
+    ;
+    public static void findKratnoK (int k, int[] data){
+        int sumOfk = 0;
+        for (int j = 0; j<data.length; j++ ) {
+            int i = data[j];
+           if (i % k == 0) {
+              sumOfk = sumOfk + i;
+           }
+        }
+
+        System.out.println("Sum of numbers are multiplied to K " + sumOfk);
+    }
+};
+//END OF Task: find all natural numbers which can be multiplied to K.
