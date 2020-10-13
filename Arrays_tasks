@@ -65,3 +65,56 @@ public class Find_and_change {
 
     }
     // END! of Task: find sum of array elements which are exceeded Z
+
+
+// TASK: find min value of array and create new array without min value
+public class Find_and_change {
+    public static void main(String[] args) {
+        //find min element in array and create new array without elements = min value
+        System.out.println("enter array length");
+        Scanner console = new Scanner(System.in);
+        int k = console.nextInt();
+        System.out.println("enter lower range of array");
+        int a = console.nextInt();
+        System.out.println("enter upper range of array");
+        int b = console.nextInt();
+        //create new array
+        int[] data = new int[k];
+        for (int i = 0; i < k; i++)
+            data[i] = a + (int) (Math.random()*b);
+        //search min of array data
+        int min = data[0];
+        for (int i = 1; i < data.length; i++) {
+            if (data[i] < min)
+                min = data[i];
+        }
+        //count number of min values in data
+        int countOfMin = 0;
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] == min)
+                countOfMin++;
+        }
+        // create new array with length of k-countOfMin
+        int[] newarray = new int[k - countOfMin];
+        int j = 0;
+
+        System.out.println("min value " + min);
+        System.out.print("parent array : ");
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(" " + data[i]);
+
+            if (data[i] != min) {
+                newarray[j] = data[i];
+                j++;
+            }
+
+        }
+        System.out.println();
+        System.out.print("new array: ");
+        for (int i = 0; i < newarray.length; i++) {
+            System.out.print(" "+ newarray[i]);
+
+        }
+    }
+}
+// END OF TASK: find min value of array and create new array without min value
