@@ -1,0 +1,40 @@
+//TASK camelCase to snake_case
+
+public class Strings_methods {
+    public static void main(String[] args) {
+        System.out.println("enter array size");
+        Scanner console = new Scanner(System.in);
+        int k = console.nextInt();
+        String[] new_array = new String[k];
+        for (int i = 0; i < k; i++) {
+            System.out.println("enter string camelCase");
+            Scanner console1 = new Scanner(System.in);
+            new_array[i] = console1.next();
+        }
+       int up = 0;
+        for (int i = 0; i < k; i++) {
+            int m = 0;
+            System.out.print(" " + new_array[i]);
+            for (Character c : new_array[i].toCharArray()) {
+                   if (c.toString().toUpperCase().equals(c.toString())) {
+                   // System.out.println(" ");
+                   //System.out.println(m +" is Upper case");
+                   up = m;
+                }
+                m++; 
+            }
+            new_array [i] = (String) new_array[i].toLowerCase();
+            String string1 = new_array[i].substring(0, up);
+            String string2 = new_array[i].substring(up);
+            String string3 = string1 + "_" + string2;
+            new_array [i] = string3;
+            }
+        for (int i = 0; i < k; i++) {
+            System.out.println("array lenth= " + new_array.length);
+            System.out.println(new_array[i]);
+        }
+    }
+}
+
+// END OF //TASK camelCase to snake_case
+
